@@ -1,0 +1,151 @@
+/* news.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+.header>img{
+    width: 80px;
+    margin-right: 10px;
+    padding-top: 10px
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+h2 {
+    color: #0066cc;
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.article-content {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.visible {
+    display: block;
+    font-weight: bold;
+}
+
+.articleimage {
+    height: 280px;
+    width: 600px;
+}
+
+.top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.language-dropdown {
+    display: flex;
+    flex-direction: column; /* Change from 'row' to 'column' */
+    align-items: flex-end; /* Align to the end of the column */
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 5px; /* Add margin to separate from label */
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column; /* Adjust flex direction for better stacking on mobile */
+        align-items: center; /* Center items on mobile */
+    }
+
+    .header > img {
+        margin-right: 0; /* Remove right margin for better spacing on mobile */
+        margin-bottom: 10px; /* Add bottom margin for better spacing on mobile */
+        margin-left: 10px;
+        width: 60%;
+        height: 100px;
+    }
+
+    .language-dropdown {
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p,
+    button,
+    .article-content {
+        font-size: 14px;
+    }
+}
+
+/* C:\Users\smano\OneDrive\Desktop\bellaripnews */
