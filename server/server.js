@@ -23,7 +23,7 @@ app.get('/api/news', async (req, res) => {
                 const title = headline || 'Title Not Available';
                 const snippet = item.story.seo ? item.story.seo['meta-description'] || 'Snippet not available' : 'Snippet not available';
                 const url = item.story.url || 'URL Not Available';
-
+                
                 try {
                     const contentResponse = await axios.get(url);
                     const $ = cheerio.load(contentResponse.data);
