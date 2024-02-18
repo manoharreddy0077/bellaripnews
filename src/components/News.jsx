@@ -89,7 +89,7 @@ const News = () => {
                     <li key={news.url}>
                         <h2>{news.title}</h2>
                         <div className="article-container">
-                        {news.content.includes('<img')&&(<img src={extractImageSrc(news.content)} alt="article image" className='articleimage'/>)}
+                        {news.content.includes('<img')&&(<img src={extractImageSrc(news.content)} alt="image" className='articleimage'/>)}
                         <p>{news.snippet}</p>
                         <button onClick={() => handleClick(index)}>Read Full Article</button>
                         <p id={`article-content-${index}`} className="article-content">
