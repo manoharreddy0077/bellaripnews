@@ -2,9 +2,18 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+}
+
+.app.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.app.dark {
+    background-color: #333;
+    color: #f4f4f4;
 }
 
 .container {
@@ -12,25 +21,33 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 50%;
 }
-.header>img{
+#language{
+    color: #0066cc;
+}
+#district{
+    color: #0066cc;
+}
+
+.header > img {
     width: 80px;
     margin-right: 10px;
-    padding-top: 10px
+    padding-top: 10px;
 }
 
 h1 {
-    color: #333;
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -43,9 +60,19 @@ li {
     padding: 15px;
 }
 
+.app.dark li {
+    background-color: #444;
+    border: 1px solid #555;
+}
+
 h2 {
     color: #0066cc;
     font-size: 18px;
+    font-weight: 600;
+}
+
+.app.dark h2 {
+    color: #66b2ff;
 }
 
 img {
@@ -56,7 +83,6 @@ img {
 }
 
 p {
-    color: #555;
     font-size: 16px;
 }
 
@@ -102,50 +128,29 @@ button:hover {
     display: flex;
     flex-direction: column; /* Change from 'row' to 'column' */
     align-items: flex-end; /* Align to the end of the column */
+    margin-bottom: 10px;
 }
 
-label {
-    margin-right: 10px;
+.district-dropdown {
+    display: flex;
+    flex-direction: column; /* Change from 'row' to 'column' */
+    align-items: flex-end; /* Align to the end of the column */
 }
 
-select {
-    padding: 8px;
+.language-dropdown select,
+.district-dropdown select {
+    padding: 5px;
     font-size: 16px;
-    margin-top: 5px; /* Add margin to separate from label */
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 600px) {
-    .header {
-        flex-direction: column; /* Adjust flex direction for better stacking on mobile */
-        align-items: center; /* Center items on mobile */
-    }
-
-    .header > img {
-        margin-right: 0; /* Remove right margin for better spacing on mobile */
-        margin-bottom: 10px; /* Add bottom margin for better spacing on mobile */
-        margin-left: 10px;
-        width: 60%;
-        height: 100px;
-    }
-
-    .language-dropdown {
-        align-items: flex-start;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    p,
-    button,
-    .article-content {
-        font-size: 14px;
-    }
+.theme-toggle {
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid currentColor;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
 }
-
-/* C:\Users\smano\OneDrive\Desktop\bellaripnews */
