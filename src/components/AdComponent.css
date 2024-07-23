@@ -1,0 +1,10 @@
+/* AdComponent.css */
+.ad-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.ad-container video {
+    max-width: 100%;
+    height: auto;
+}
