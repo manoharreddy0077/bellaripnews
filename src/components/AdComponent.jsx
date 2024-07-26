@@ -7,7 +7,7 @@ const AdComponent = () => {
             {/* Your ad or video component here */}
             <p>Loading... Please wait.</p>
             {/* Example: Video ad */}
-            <video width="100%" controls>
+            <video width="100%" autoPlay muted>
                 <source src={videoSrc} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
